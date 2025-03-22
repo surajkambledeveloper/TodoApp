@@ -12,14 +12,14 @@ dotenv.config();
 app.use(express.json())
 app.use(cookieParser()); // Use before routes
 
-app.use(cors({
-    origin:process.env.FRONT_END_URL,
-     // here Credential true because jo bhi fronend se reponse ayega lelo 
-    credentials:true,
-    methods:"GET,POST,PUT,DELETE",
-    allowedHeaders:["Content-Type", "Authorization"]
-}))
-
+// app.use(cors({
+//     origin:process.env.FRONT_END_URL,
+//      // here Credential true because jo bhi fronend se reponse ayega lelo 
+//     credentials:true,
+//     methods:"GET,POST,PUT,DELETE",
+//     allowedHeaders:["Content-Type", "Authorization"]
+// }))
+app.use(cors());
 
 const PORT=process.env.PORT ||8000
 
